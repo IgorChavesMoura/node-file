@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Node file</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <h1>Sobe teu arquivo aí zé</h1>
+        <form action="http://localhost:3000/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="filetoupload"><br>
+            <input type="submit">
+        </form>
+        <h1>Baixa teu arquivo aí zé</h1>
+        <a class="button" href="http://localhost:3000/file" target="_blank">Baixar arquivo pelo html</a>
+        <button id="download">Baixar arquivo pelo JS</button>
+
+        <script>
+            document.querySelector('#download').addEventListener('click', function (e) {
+
+                e.preventDefault();
+                window.open('http://localhost:3000/file', '_blank');
+
+            });
+        </script>
+    </body>
+
+</html>
